@@ -71,28 +71,7 @@
 	height:120px;
 	position:relative;
 	margin:0 auto;
-	background:transparent url(../images/animal1.png) no-repeat center center;
-}
-.ca-item-2 .ca-icon{
-	background-image:url(../images/animal2.png);
-}
-.ca-item-3 .ca-icon{
-	background-image:url(../images/animal3.png);
-}
-.ca-item-4 .ca-icon{
-	background-image:url(../images/animal4.png);
-}
-.ca-item-5 .ca-icon{
-	background-image:url(../images/animal5.png);
-}
-.ca-item-6 .ca-icon{
-	background-image:url(../images/animal6.png);
-}
-.ca-item-7 .ca-icon{
-	background-image:url(../images/animal7.png);
-}
-.ca-item-8 .ca-icon{
-	background-image:url(../images/animal8.png);
+    background: transparent;
 }
 .ca-item h3{
 	font-family: 'Coustard', sans-serif;

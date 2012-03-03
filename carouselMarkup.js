@@ -1,9 +1,20 @@
-var images = ['Memox.png','Memox.png','Memox.png','Memox.png'];
-var headers = ['Açıldık..','Blog Yazısı-1','Blog Yazısı-2','Blog Yazısı-3'];
+var images = ['img/Memox.png',
+              'http://www.mehmettamturk.com/blog/wp-content/uploads/2012/02/01-10_jquery_mouse_movement-180x160.jpg',
+              'http://www.mehmettamturk.com/blog/wp-content/uploads/2012/02/css-animation-180x160.png',
+              'http://www.mehmettamturk.com/blog/wp-content/uploads/2012/01/soru.png'];
+var headers = ['Açıldık..',
+               'Jquery Animate Api',
+               'Animate.css – Animasyon Kütüphanesi',
+               'Sayfanın Adres Bilgileri ( window.location )'];
 var descriptions = ['Kişisel Web Sayfamı sonunda açtım, hakkımda ufak bir websitesi',
-                   'Bloğumda son paylaştığım yazılardan birisi..',
-                   'Bloğumda paylaştığım yazılardan sondan bir öncekisi',
-                   'Bloğumda paylaştığım yazılardan sondan bir öncekisinden önceki'];
+                   'Eğer projelerinizde animasyon yaratmak isterseniz Jquery kütüphanesinin animate methodunu kullanabilirsiniz. Method genel olarak 4 parametre alır ',
+                   'animate.css projelerinizde hoş, başarılı ve cross-browser animasyonlar yaratabiliceğiniz bir kütüphanedir. Animate Css Github adresinden kütüphaneyi indirebilirsiniz. ',
+                   '"window.location" nesnesi ile bulunduğunuz sayfanın adresi hakkında bilgi edinebilirsiniz ve bulunduğunuz adresi değiştirebilirsiniz.'];
+
+var links = ['file:///C:/Users/Mehmet/PhpstormProjects/portfolio/index.html',
+             'http://www.mehmettamturk.com/blog/?p=496',
+             'http://www.mehmettamturk.com/blog/?p=467',
+             'http://www.mehmettamturk.com/blog/?p=400'];
 
 var getArticles = function() {
     var items = [];/*
@@ -102,23 +113,35 @@ var getXMLElement = function() {
 
 
 var createMarkup = function(){
-    var items = getXMLElement();
+    //var items = getXMLElement();
 
     var markup = '<div id="ca-container" class="ca-container">' +
                      '<div class="ca-wrapper">';
 
     for (var i = 0, ii = headers.length; i < ii; i++) {
+        var head = headers[i];
+        if (head.length > 20) {
+            head = head.slice(0,20);
+            head = head + '...';
+        }
+
+        var desc = descriptions[i];
+        if (desc.length > 75) {
+            desc = desc.slice(0,75);
+            desc = desc + '...';
+        }
+
         markup = markup + '<div class="ca-item ca-item-' + i + '">' +
                               '<div class="ca-item-main">' +
                                   '<div class="ca-icon">' +
-                                      '<img src="img/' + images[i] + '" alt="memo" height="120" width="180">' +
+                                      '<img src="' + images[i] + '" alt="memo" height="120" width="180">' +
                                   '</div>' +
-                                  '<h3>' + headers[i] + '</h3>' +
+                                  '<h3 title="' + headers[i] + '">' + head + '</h3>' +
                                   '<h4>' +
                                       '<span class="ca-quote">&ldquo;</span>' +
-                                      '<span>' + descriptions[i] + '</span>' +
+                                      '<span title="' + descriptions[i] + '">' + desc + '</span>' +
                                   '</h4>' +
-                                  '<a href="#" class="ca-more">dahası...</a>' +
+                                  '<a href="' + links[i] + '" class="ca-more">Devamını Oku...</a>' +
                               '</div>' +
                           '</div>';
     }
