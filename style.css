@@ -16,13 +16,14 @@ h1 {
     width: 100%;
     height: 20px;
     border-bottom: 1px solid #CFFFF5;
-    background: url('images.jpg');
+    background: url('img/images.jpg');
 
 }
 
 #header {
     width: 100%;
     height: 400px;
+    background: gray;
     /* IE10 */    background-image: -ms-radial-gradient(center, circle cover, #808080 0%, #212121 100%);
     /* Mozilla Firefox */    background-image: -moz-radial-gradient(center, circle cover, #808080 0%, #212121 100%);
     /* Opera */    background-image: -o-radial-gradient(center, circle cover, #808080 0%, #212121 100%);
@@ -39,11 +40,11 @@ h1 {
 }
 
 #header #logoAndMenu #logo {
-    width: 200px;
-    height: 100px;
-    margin: 10px 0px 0px 14px;
-    border: 1px solid #FFFFFF;
+    width: 145px;
+    height: 120px;
+    margin: 10px 0px 0px 52px;
     font-size: 100px;
+    background: url('img/logo2.png') no-repeat;
 }
 
 #header #logoAndMenu #menu {
@@ -60,7 +61,7 @@ h1 {
     font-weight: bold;
     color: #FFFFFF;
     font-size: 22px;
-    text-align: right;
+    text-align: center;
 }
 
 #header #logoAndMenu #menu span.menuItem a:hover {
