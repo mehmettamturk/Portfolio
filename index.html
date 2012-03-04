@@ -31,8 +31,38 @@
         $(function() {
             $('#carousel').html(createMarkup());
             $('#ca-container').contentcarousel();
+
+            <!-- ADD SHADOW TO FOOTER ELEMENTS -->
+            $("#twitter").hover(
+                    function () {
+                        $('#twitter').animate({
+                                    marginTop: '1px',
+                                    boxShadow: '5px 0 12px 0px #000000'
+                        },500);
+                    },
+                    function () {
+                        $('#twitter').animate({
+                                    marginTop: '0px',
+                                    boxShadow: '0px 0px 0px 0px #000000'
+                        },500);
+                    }
+            );
+
+            $("#mail").hover(
+                    function () {
+                        $(this).animate({
+                            boxShadow: '5px 0 12px 0px #000000'
+                        },500);
+                    },
+                    function () {
+                        $(this).animate({
+                            boxShadow: '0px 0px 0px 0px #000000'
+                        },500);
+                    }
+            );
         });
     </script>
+
 
 </head>
 <body>
